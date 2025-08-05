@@ -1,0 +1,357 @@
+var config = {
+    style: 'mapbox://styles/damare/cktt6xnob01fu17nz253bxbej',// 'mapbox://styles/damare/ckpx1xlc30bot17saq0cnrtmr', // style URL
+    accessToken: 'pk.eyJ1IjoiZGFtYXJlIiwiYSI6ImNrcHFmbzFpdzAwOHcybnB2YTg5MHpwczEifQ.A8q1SPeisEpBl_zoUhxSMw', // 'pk.eyJ1IjoiZGFtYXJlIiwiYSI6ImNrcHFmbzFpdzAwOHcybnB2YTg5MHpwczEifQ.A8q1SPeisEpBl_zoUhxSMw',
+    showMarkers: true,
+    theme: 'dark',
+    title: '',
+    subtitle: '',
+    byline: '',
+    footer: '',
+    chapters: [
+		{
+            id: 'glacier-np',
+            alignment: 'center',
+            title: '365 days of Tigray Genocide',
+            image: 'https://assets.teenvogue.com/photos/6111ad88ddd7f5da88f1f17b/16:9/w_2560%2Cc_limit/GettyImages-1230073031.jpg',
+            description: 'Today marks nearly 300 days of almost no contact with our families. During this period, Tigray has experienced massacres, chemical warfare, vandalized hospitals, looted universities, destroyed churches and mosques; humanitarian aid blockages, man-made famine, and weaponized rape (yes — intentional, systematic rape). ',
+            location: {
+                center: [23.38605, 7.03153],
+                zoom: 2.5,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [
+                {
+                    layer: 'gnpglaciers-1998',
+                    opacity: 0.25
+                },
+                {
+                    layer: 'glaciernp-boundary',
+                    opacity: 0.25
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'glaciernp-boundary',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+			
+            id: 'phl',
+            alignment: 'right',
+            title: 'Tigray',
+            image: '',
+            description: ' Liberation Front (TPLF) and the Ethiopian federal government began, in which Eritrea took part on the side of the federal government,[6] rapidly escalating into the Tigray War and destabilizing the region.[7] ',
+            location: {
+                center: [38.221, 13.554],
+                zoom: 7.5,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            onChapterEnter: [
+                {
+                    layer: 'phl-city-limits',
+                    opacity: 0.45
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'phl-city-limits',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'bike-lanes',
+            alignment: 'right',
+            title: 'Bike Lanes',
+            image: '',
+            description: 'Mek/’ele is the capital city of the Tigray region, in northern Ethiopia. In the center, the grand palace of 19th-century Emperor Yohannes IV is now the Yohannes IV Museum. The tall Martyrs’ Memorial Monument commemorates those who fought the communist Derg regime in the late 20th century. The city’s markets are an important stop for salt merchants arriving from the Danakil Depression in the country’s northeast.',
+            location: {
+                center: [39.45934, 13.49045],
+                zoom: 14,
+                pitch: 55.50,
+                bearing: -7.20
+            },
+            onChapterEnter: [
+                {
+                    layer: 'phl-bike-network',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+              {
+                    layer: 'phl-bike-network',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'indego',
+            alignment: 'right',
+            title: 'Indego Bike Share',
+            image: '',
+            description: 'Indego has been operating in Philadelphia since 20XX. The system initally was focused on Center City, but has expanded service to neighboring areas to support equitable mobility options to the city\'s residents.',
+            location: {
+                center: [38.719, 14.130],
+                zoom: 16,
+                pitch: 60.00,
+                bearing: -16.80
+            },
+            onChapterEnter: [
+                {
+                    layer: 'indego-stations',
+                    opacity: 0.8
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'indego-stations',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'belmont',
+            alignment: 'right',
+            title: 'Belmont Plateau Trails',
+            image: 'https://cdn.glitch.me/b6251d90-0213-475a-9c62-bc28f3d3118e%2Fthumbnails%2FAxumTsion.png?1634109345297',
+			description: 'A short ride along the Schuylkill River Trail from the Art Museum, Belmont is a twisty, log-ridden rollercoaster of a trail network. It is easy to get turned around, the underbrush is at times impenetrable, and short steep sections come out of nowhere. In other words, it\'s really fun',
+            location: {
+                center: [38.70711, 14.12704],
+                zoom: 14,
+                pitch: 44.00,
+                bearing: -40.00
+            },
+            onChapterEnter: [
+                {
+                    layer: 'belmont',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'belmont',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'wiss',
+            alignment: 'right',
+            title: 'Wissahickon Park Trails',
+            image: '',
+            description: '<iframe width="560" height="315" src="https://www.youtube.com/embed/KQLBEfdjaFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> This steep, rocky gorge can be surprisingly technical. Follow the orange and yellow trails to repeatedly climb and descend through the schist hillsides (careful of the cliffs), or stick to the gravel Forbidden Drive for a relaxing ride along the creek. You\'ll forget you\'re in a city.',
+            location: {
+                center: [38.719, 14.132],
+                zoom: 18,
+                pitch: 47.50,
+                bearing: 32.80
+            },
+            onChapterEnter: [
+                {
+                    layer: 'wissahickon',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'wissahickon',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'pennypack',
+            alignment: 'right',
+            title: 'Pennypack Park Trails',
+            image: '',
+            description: 'Pennypack is a great introduction trail system. Not too steep and not too technical, the beautiful wooded park also provides a great escape from urban life. The south side trails are originally bridle trails, so be nice to equestrians and dismount when you approach them.',
+            location: {
+                center: [36.56, 14.070],
+                zoom: 14,
+                pitch: 43.50,
+                bearing: 2
+            },
+            onChapterEnter: [
+                {
+                    layer: 'pennypack',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pennypack',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'Negash',
+            alignment: 'right',
+            title: 'AddisLucy',
+            image: 'https://cdn.glitch.me/b6251d90-0213-475a-9c62-bc28f3d3118e%2Fthumbnails%2FEthiopia%20tigray%20nejashi%20mosque%20supplied.jpg?1634112009209',
+            description: 'Pennypack is a great introduction trail system. Not too steep and not too technical, the beautiful wooded park also provides a great escape from urban life. The south side trails are originally bridle trails, so be nice to equestrians and dismount when you approach them.',
+            location: {
+                center: [39.59865, 13.87564],
+                zoom: 18,
+                pitch: 43.50,
+                bearing: 2
+            },
+            onChapterEnter: [
+                {
+                    layer: 'pennypack',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pennypack',
+                    opacity: 0
+                }
+            ]
+        }
+		
+    ]
+};
+const geojson = {
+        'type': 'FeatureCollection',
+        'features': [
+            {
+                'type': 'Feature',
+                'properties': {
+					'title': 'Axum Oblisk',
+					'description': 'The Obelisk of Axum (Tigrinya: ሓወልቲ ኣኽሱም) is a 4th-century CE, 24-metre-tall (79-feet) phonolite[2] stele/obelisk, weighing 160 tonnes, in the city of Axum in Ethiopia. It is ornamented with two false doors at the base and features decorations resembling windows on all sides. The obelisk ends in a semi-circular top, which used to be enclosed by metal frames.',
+                    'message': 'Axum Hawelti',
+                    'iconSize': [175, 170]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [38.719, 14.132]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+					'title': 'Axum Oblisk',
+					'description': 'The Obelisk of Axum',
+                    'message': 'Martyrs Hawelti',
+                    'iconSize': [155, 150]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [39.45934, 13.49045]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Axum Oblisk',
+					'description': 'The Obelisk of Axum',
+					'message': 'Baz',
+                    'iconSize': [240, 140]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [38.719, 14.130]
+                }
+            },
+			{
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Axum Oblisk',
+					'description': 'Dungur (or Dungur Addi Kilte) is the ruins of a substantial mansion in Aksum, Ethiopia, the former capital city of the Kingdom of Aksum. The ruins are in the western part of Aksum, across the road from the Gudit stelae field. Dungur is known locally and popularly as the Palace of the Queen of Sheba (i.e. the Palace of Makeda in Ethiopia).',
+					'message': 'Baz',
+                    'iconSize': [173, 120]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [38.70711, 14.12704] //14.12704, 38.70711
+
+                }
+            },
+			{
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Attack on Civilians',
+					'description': 'Attack on civilians at church',
+					'message': 'Baz',
+                    'iconSize': [80, 80]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [36.56, 14.070],
+					
+                }
+            },
+      {
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Attack on Heritage',
+					'description': 'Attack on civilians at Mosque',
+					'message': 'Baz',
+                    'iconSize': [180, 100]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [39.59865, 13.87564],
+					
+                }
+            },
+          
+			{
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Eritrea',
+					'description': 'Eritrea- Ethiopia Border',
+					'iconSize': [170, 120]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [36.97641, 14.56824],
+					
+                }
+            },
+			{
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Tigray',
+					'description': 'A semi Autonomous State in Northern Ethiopia',
+					'iconSize': [80, 80]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [38.34777, 13.93533],
+					
+                }
+            },
+			{
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Sudan',
+					'description': 'Sudan- Ethiopia Border',
+					'iconSize': [80, 80]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [36.37587, 14.08097],
+					
+                }
+            },
+			{
+                'type': 'Feature',
+                'properties': {
+                    'title': 'Amhara, Ethiopia',
+					'description': 'Land of the Culture-Vultures. A country that means nothing without Tigray',
+					'iconSize': [80, 80]
+                },
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [37.75352, 13.24597],
+					
+                }
+            }
+        ]
+    };
