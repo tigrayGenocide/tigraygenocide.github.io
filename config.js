@@ -264,7 +264,7 @@ var config = {
       onChapterEnter: [
         {
           layer: "Axum",
-          opacity: 0
+          opacity: 1
         }
       ],
       onChapterExit: [
