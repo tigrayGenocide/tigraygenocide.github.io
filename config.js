@@ -273,7 +273,7 @@ var config = {
           opacity: 0
         }
       ]
-    },
+    }
   ]
 };
 const geojson = {
