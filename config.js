@@ -248,7 +248,7 @@ var config = {
           opacity: 0
         }
       ]
-    }
+    },
      {
       id: "blank",
       alignment: "right",
