@@ -249,27 +249,29 @@ var config = {
         }
       ]
     },
-     {
-      id: "blank",
+    {
+      id: "Blank",
       alignment: "right",
-      title: "",
-      
-      
+      title: "Blank",
+      image:
+        "",
+      description:
+        'Return from Mahbere Dego exit',
       location: {
         center: [38.719737, 14.1317],
-        zoom: 18,
-        pitch: 90,
-        bearing: 25
+        zoom: 19,
+        pitch: 60,
+        bearing: -180
       },
       onChapterEnter: [
         {
-          layer: "Axum",
+          layer: "Tog",
           opacity: 1
         }
       ],
       onChapterExit: [
         {
-          layer: "Axum",
+          layer: "Tog",
           opacity: 0
         }
       ]
