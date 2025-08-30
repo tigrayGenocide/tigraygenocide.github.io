@@ -249,6 +249,31 @@ var config = {
         }
       ]
     }
+     {
+      id: "blank",
+      alignment: "right",
+      title: "",
+      
+      
+      location: {
+        center: [38.719737, 14.1317],
+        zoom: 18,
+        pitch: 90,
+        bearing: 25
+      },
+      onChapterEnter: [
+        {
+          layer: "Axum",
+          opacity: 0
+        }
+      ],
+      onChapterExit: [
+        {
+          layer: "Axum",
+          opacity: 0
+        }
+      ]
+    },
   ]
 };
 const geojson = {
