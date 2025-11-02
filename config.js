@@ -12,7 +12,7 @@ var config = {
 		{
             id: 'afri',
             alignment: 'center',
-            title: '365 days of Tigray Genocide',
+            title: '5 Years of Tigray Genocide',
             image: 'https://assets.teenvogue.com/photos/6111ad88ddd7f5da88f1f17b/16:9/w_2560%2Cc_limit/GettyImages-1230073031.jpg',
             description:  'November 4 marks 5 years since the onset of War on Tigray. During this period, Tigray has experienced massacres, chemical warfare, vandalized hospitals, looted universities, destroyed churches and mosques; humanitarian aid blockages, man-made famine, and weaponized rape (yes — intentional, systematic rape). <br><b><a href="https://www.teenvogue.com/story/tigray-ethiopia-genocide"><b>Read More from Teen Vogue Blog</a>',
             location: {
